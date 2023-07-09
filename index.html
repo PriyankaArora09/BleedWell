@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<!-- ChatBot -->
+<link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.convform.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<script src="https://kit.fontawesome.com/7c3f38923f.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<!-- ChatBot -->
+<div class="chat_icon">
+	<i class="fa fa-comments" aria-hidden="true"></i>
+</div>
+
+<div class="chat_box">
+	<div class="my-conv-form-wrapper">
+		<form action="" method="GET" class="hidden">
+<!--welcome text-->
+      <select data-conv-question="Welcome to Bleed Well! From knowing about periods to some of the FAQs, we've got you covered. Choose the option you want to discover about.
+	  <br><br>
+	  Remember, these answers provide general information and should not replace professional medical advice. If you have specific concerns or questions about your 
+	  periods, it is recommended to consult with a healthcare provider for personalized guidance and support." name="category">
+		<option value="KnowAboutPeriods">Know About Periods</option>
+        <option value="TrackPeriods">Tracking menstrual cycle</option>
+        
+		<option value="PeriodsProblems">PMS</option>
+		<option value="contactgynaec">FAQs</option>
+		<option value="closeConvo">Close Conversation</option>
+      </select>
+
+      <div data-conv-fork="category">
+        <div data-conv-case="TrackPeriods">
+		  <input type="text" data-conv-question="You can track your menstrual cycle by keeping a record of the first day of each period. Many smartphone 
+		  apps and online tools are available to help track your cycle, predict future periods, and note symptoms or changes." data-no-answer="true">
+			  
+			  
+        </div>
+		<!--KNOW ABOUT PERIODS-->
+        <div data-conv-case="KnowAboutPeriods">
+          <input type="text" name="periodsinfo" data-conv-question="Please, enter your name"> 
+		  <input type="text" data-conv-question="Hi <b>{periodsinfo}</b>, <br> The contents to know about periods includes following items. Swipe right to see." data-no-answer="true">
+		  <select data-conv-question="Choose the one that you want to discover" name="discover">
+			<option value="Menstruation">What is Menstruation?</option>
+			<option value="menstruationOccur">How does menstruation occur?</option>
+			<option value="Phases">What are the main phases of menstrual cycle?</option>
+			<option value="CycleLast">How long does a typical menstrual cycle last?</option>
+		 </select>
+			<div data-conv-fork="discover">
+				<div data-conv-case="Menstruation">
+					<input type = "text" data-conv-question="Menstruation is a natural process that occurs in individuals with a uterus. 
+					It is the shedding of the uterine lining, which happens approximately once a month. It is a sign that a person is not pregnant 
+					and marks the beginning of the menstrual cycle." data-no-answer="true">
+				</div>
+				<div data-conv-case="menstruationOccur">
+					<input type="text" data-conv-question="Menstruation occurs when the uterus sheds its lining, which was built up in preparation for a 
+					potential pregnancy. Hormonal changes cause the blood vessels in the uterus to constrict, leading to the shedding of the lining through 
+					the cervix and vagina." data-no-answer="true">
+				</div>
+				<div data-conv-case="Phases">
+					<input type="text" data-conv-question="The menstrual cycle consists of four main phases: menstruation (the shedding of the uterine lining), 
+					the follicular phase (when an egg matures in the ovary), ovulation (the release of the mature egg), and the luteal phase 
+					(preparation of the uterus for pregnancy)." data-no-answer="true">
+				</div>
+				<div data-conv-case="CycleLast">
+					<input type="text" data-conv-question="A typical menstrual cycle lasts around 28 days, but it can vary between individuals. 
+					Some people may have shorter or longer cycles, ranging from 21 to 35 days." data-no-answer="true">
+				</div>
+			</div>
+			
+		  
+
+        </div>
+
+		<!--PMS-->
+		<div data-conv-case="PeriodsProblems">
+			<input type="text" name="periodsproblemss" data-conv-question="Let's discover about PMS!" data-no-answer="true"> 
+			<input type="text" data-conv-question="PMS, or Premenstrual Syndrome, refers to a combination of physical and emotional symptoms that occur 
+			in the days or weeks before a menstrual period. It is believed to be related to hormonal changes during the menstrual cycle. <br><br>
+			Remember, these answers provide general information and should not replace professional medical advice. If you have specific concerns or questions 
+			about your own PMS symptoms, it is recommended to consult with a healthcare provider for personalized guidance and support." data-no-answer="true">
+
+			<!-- <input type="text" data-conv-question="Want to know problem you are facing?"> -->
+
+			<select data-conv-question="To know more, choose 
+			from the options below:" name="choose">
+				<option value="Symptoms">Symptoms of PMS</option>
+				<option value="PMSlast">How long does PMS typically last?</option>
+				<option value="treatment">Effective treatments for PMS</option>
+				<option value="Diet">Dietery changes that help with PMS</option>
+			  </select>
+
+			  <div data-conv-fork="choose">
+
+				<!--pms option 1-->
+				<div data-conv-case="Symptoms">
+					<input type="text" data-conv-question="Symptoms of PMS can vary but commonly include mood swings, irritability, bloating, breast tenderness, fatigue, food cravings, 
+					headaches, and changes in sleep patterns. These symptoms typically resolve once menstruation begins." data-no-answer="true">
+
+					<select data-conv-question="To know more about symptoms, choose from below menu-" name="menu">
+						<option value="vary">Can symptoms vary from cycle to cycle?</option>
+				        <option value="moodSwings">Managing mood swings during PMS</option>
+				        <option value="stress">Does stress impact PMS symptoms?</option>
+				        <option value="anxiety">Connection between PMS and anxiety</option>
+                        <option value="dailyLife">Can PMS affect my daily life and relationships?</option>
+						<option value="mainMenu">Go back to main menu</option>
+					</select>
+                    
+					<div data-conv-fork="menu">
+						<div data-conv-case="vary">
+							<input type="text" data-conv-question="Yes, PMS symptoms can vary from cycle to cycle. 
+							Some cycles may have more pronounced symptoms, while others may have milder or even no symptoms at all." data-no-answer="true">
+							<select data-conv-question="To discover other options, choose one-" name="menu">
+								<option value="moodSwings">Managing mood swings during PMS</option>
+								<option value="stress">Does stress impact PMS symptoms?</option>
+								<option value="anxiety">Connection between PMS and anxiety</option>
+								<option value="dailyLife">Can PMS affect my daily life and relationships?</option>
+								<option value="mainMenu">Go back to main menu</option>
+							</select>
+						</div>
+	
+						<div data-conv-case="moodSwings">
+							<input type="text" data-conv-question="To manage mood swings, it can be helpful to engage in relaxation techniques, such as deep 
+							breathing, meditation, or yoga. Practicing self-care, getting support from loved ones, and maintaining a healthy lifestyle can also 
+							contribute to improved mood during PMS." data-no-answer="true">
+							<select data-conv-question="To discover options, choose one-" name="menu">
+								<option value="vary">Can symptoms vary from cycle to cycle?</option>
+								
+								<option value="stress">Does stress impact PMS symptoms?</option>
+								<option value="anxiety">Connection between PMS and anxiety</option>
+								<option value="dailyLife">Can PMS affect my daily life and relationships?</option>
+								<option value="mainMenu">Go back to main menu</option>
+							</select>
+						</div>
+	
+						<div data-conv-case="stress">
+							<input type="text" data-conv-question="High levels of stress can exacerbate PMS symptoms. Stress management techniques, such as 
+							relaxation exercises, mindfulness, and engaging in activities you enjoy, can help mitigate the impact of stress on PMS symptoms." 
+							data-no-answer="true">
+							<select data-conv-question="To discover other options, choose one-" name="menu">
+								<option value="vary">Can symptoms vary from cycle to cycle?</option>
+								<option value="moodSwings">Managing mood swings during PMS</option>
+								
+								<option value="anxiety">Connection between PMS and anxiety</option>
+								<option value="dailyLife">Can PMS affect my daily life and relationships?</option>
+								<option value="mainMenu">Go back to main menu</option>
+
+							</select>
+						</div>
+	
+						<div data-conv-case="anxiety">
+							<input type="text" data-conv-question="Some individuals with PMS may experience worsened symptoms of depression or anxiety during 
+							the premenstrual phase. This is known as Premenstrual Dysphoric Disorder (PMDD). If you suspect PMDD, it's important to consult a 
+							healthcare professional for an accurate diagnosis and appropriate treatment." data-no-answer="true">
+							<select data-conv-question="To discover other options, choose one-" name="menu">
+								<option value="vary">Can symptoms vary from cycle to cycle?</option>
+								<option value="moodSwings">Managing mood swings during PMS</option>
+								<option value="stress">Does stress impact PMS symptoms?</option>
+								
+								<option value="dailyLife">Can PMS affect my daily life and relationships?</option>
+								<option value="mainMenu">Go back to main menu</option>
+							</select>
+						</div>
+	
+						<div data-conv-case="dailyLife">
+							<input type="text" data-conv-question="Yes, severe PMS symptoms can significantly impact daily life, work, and relationships. It is 
+							essential to seek support, explore coping strategies, and consider treatment options if symptoms interfere with your well-being." 
+							data-no-answer="true">
+							<select data-conv-question="To discover about other options, choose one-" name="menu">
+								<option value="vary">Can symptoms vary from cycle to cycle?</option>
+								<option value="moodSwings">Managing mood swings during PMS</option>
+								<option value="stress">Does stress impact PMS symptoms?</option>
+								<option value="anxiety">Connection between PMS and anxiety</option>
+								<option value="mainMenu">Go back to main menu</option>
+								
+							</select>
+						</div>
+					</div>
+					
+				</div>
+
+           <!--pms option 2-->
+				<div data-conv-case="PMSlast">
+					<input type="text" data-conv-question="PMS symptoms usually start a week or two before menstruation and resolve shortly after the period begins. 
+					The duration and intensity of symptoms can vary between individuals." data-no-answer="true">
+				</div>
+
+				<!--pms option 3-->
+				<div data-conv-case="treatment">
+					<input type="text" data-conv-question="Various treatments can help manage PMS symptoms. Lifestyle changes like regular exercise, a 
+					balanced diet, stress reduction techniques, and getting enough sleep can be beneficial. Additionally, medications such as pain relievers, 
+					hormonal contraceptives, and selective serotonin reuptake inhibitors (SSRIs) may be recommended by a healthcare professional." 
+					data-no-answer="true">
+
+					<select data-conv-question="To know more about treatment, choose from below menu-" name="treaty">
+						<option value="exercise">Can exercise help alleviate PMS symptoms?</option>
+				        <option value="medication">Are there any over-the-counter medications for PMS relief?</option>
+				        <option value="medicalHelp">When should I seek medical help for my PMS symptoms?</option>
+				        <option value="birthControl">Can birth control methods help reduce PMS?</option>
+                        <option value="naturalRemedy">Natural remedies or alternative therapies for PMS</option>
+						<option value="mainMenu">Go back to main menu</option>
+					</select>
+
+					<div data-conv-fork="treaty">
+						<div data-conv-case="exercise">
+							<input type="text" data-conv-question="Yes, regular physical activity has been shown to reduce PMS symptoms. Engaging in aerobic 
+							exercises, such as brisk walking or swimming, can boost mood, reduce bloating, and alleviate discomfort associated with PMS." 
+							data-no-answer="true">
+							<select data-conv-question="Discover more" name="treaty">
+								
+								<option value="medication">Are there any over-the-counter medications for PMS relief?</option>
+								<option value="medicalHelp">When should I seek medical help for my PMS symptoms?</option>
+								<option value="birthControl">Can birth control methods help reduce PMS?</option>
+								<option value="naturalRemedy">Natural remedies or alternative therapies for PMS</option>
+								<option value="mainMenu">Go back to main menu</option>
+							</select>
+						</div>
+
+						<div data-conv-case="medication">
+							<input type="text" data-conv-question="Over-the-counter pain relievers like nonsteroidal anti-inflammatory drugs (NSAIDs) can help 
+							alleviate physical symptoms such as cramps, headaches, and breast tenderness. Always follow the recommended dosage and consult a 
+							healthcare professional if needed." data-no-answer="true">
+							<select data-conv-question="Discover more" name="treaty">
+								<option value="exercise">Can exercise help alleviate PMS symptoms?</option>
+								
+								<option value="medicalHelp">When should I seek medical help for my PMS symptoms?</option>
+								<option value="birthControl">Can birth control methods help reduce PMS?</option>
+								<option value="naturalRemedy">Natural remedies or alternative therapies for PMS</option>
+								<option value="mainMenu">Go back to main menu</option>
+							</select>
+						</div>
+
+						<div data-conv-case="medicalHelp">
+							<input type="text" data-conv-question="If your PMS symptoms significantly interfere with your daily life, relationships, or emotional 
+							well-being, it's advisable to consult a healthcare professional. They can provide a proper diagnosis, evaluate your symptoms, and 
+							recommend appropriate treatment options." data-no-answer="true">
+							<select data-conv-question="Discover more" name="treaty">
+								<option value="exercise">Can exercise help alleviate PMS symptoms?</option>
+								<option value="medication">Are there any over-the-counter medications for PMS relief?</option>
+								
+								<option value="birthControl">Can birth control methods help reduce PMS?</option>
+								<option value="naturalRemedy">Natural remedies or alternative therapies for PMS</option>
+								<option value="mainMenu">Go back to main menu</option>
+							</select>
+						</div>
+
+						<div data-conv-case="naturalRemedy">
+							<input type="text" data-conv-question="Some natural remedies and alternative therapies, such as herbal supplements (e.g., chasteberry), acupuncture, or 
+							aromatherapy, have been explored for managing PMS symptoms. However, their effectiveness may vary, and it's important to consult with a healthcare 
+							professional before trying any alternative treatments." data-no-answer="true">
+							<select data-conv-question="Discover more" name="treaty">
+								<option value="exercise">Can exercise help alleviate PMS symptoms?</option>
+								<option value="medication">Are there any over-the-counter medications for PMS relief?</option>
+								<option value="medicalHelp">When should I seek medical help for my PMS symptoms?</option>
+								<option value="birthControl">Can birth control methods help reduce PMS?</option>
+								
+								<option value="mainMenu">Go back to main menu</option>
+							</select>
+						</div>
+
+						<div data-conv-case="birthControl">
+							<input type="text" data-conv-question="Certain hormonal contraceptives, such as combined oral contraceptives or hormonal IUDs, 
+							may help reduce PMS symptoms in some individuals. These methods can regulate hormonal fluctuations and provide relief for some 
+							women." data-no-answer="true">
+							<select data-conv-question="Discover more" name="treaty">
+								<option value="exercise">Can exercise help alleviate PMS symptoms?</option>
+								<option value="medication">Are there any over-the-counter medications for PMS relief?</option>
+								<option value="medicalHelp">When should I seek medical help for my PMS symptoms?</option>
+								
+								<option value="naturalRemedy">Natural remedies or alternative therapies for PMS</option>
+								<option value="mainMenu">Go back to main menu</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!--pms option 4-->
+				<div data-conv-case="Diet">
+					<input type="text" data-conv-question="Consuming a balanced diet that includes whole grains, fruits, vegetables, lean proteins, and healthy fats may help manage 
+					PMS symptoms. Reducing the intake of caffeine, salt, and processed foods can also be beneficial." data-no-answer="true">
+				</div>
+
+				<!--pms option 5 main menu-->
+				<div data-conv-case="mainMenu">
+					<select data-conv-question="Welcome to Bleed Well! From knowing about periods to some of the FAQs, we've got you covered. Choose the option you want to discover about." name="category">
+						<option value="KnowAboutPeriods">Know About Periods</option>
+						<option value="TrackPeriods">Track Periods</option>
+
+						<option value="PeriodsProblems">PMS</option>
+						<option value="contactgynaec">FAQs</option>
+					  </select>
+				
+				</div>
+			  </div>
+
+			  <!--FAQS-->
+        <div data-conv-fork="category">
+			  <div data-conv-case="contactgynaec">
+				<select data-conv-question="FAQs about Periods!" name="find">
+					<option value="age">At what age do most people start their periods?</option>
+					<option value="pregnant">Can I get pregnant during my period?</option>
+					<option value="symptoms">What are some common symptoms of periods?</option>
+					<option value="cramps">How can I manage menstrual cramps?</option>
+					<option value="hygieneProducts">How often should I change my menstrual product?</option>
+					<option value="swim">an I swim or exercise during my period?</option>
+					<option value="irregularNormal">Are irregular periods normal?</option>
+					<option value="sex">Can I have sex during my period?</option>
+					
+
+				</select>
+				<div data-conv-fork="find">
+					<div data-conv-case="age">
+						<input type="text" data-conv-question="Most people start their periods between the ages of 9 and 16, with the average age being 
+						around 12. However, the onset of menstruation can vary widely among individuals."
+						 data-no-answer="true">
+					</div>
+					<div data-conv-case="pregnant">
+						<input type="text" data-conv-question="While it is less likely, it is still possible to get pregnant during your period. Sperm can 
+						survive in the body for several days, so if you have a shorter cycle or ovulate early, there is a chance of pregnancy."
+						 data-no-answer="true">
+					</div>
+					<div data-conv-case="symptoms">
+						<input type="text" data-conv-question="Common symptoms of periods include menstrual cramps, bloating, breast tenderness, 
+						mood swings, fatigue, headaches, and food cravings. However, symptoms can vary widely among individuals."
+						 data-no-answer="true">
+					</div>
+					<div data-conv-case="cramps">
+						<input type="text" data-conv-question="To manage menstrual cramps, you can try using over-the-counter pain relievers, applying 
+						heat to the lower abdomen, taking rest, practicing relaxation techniques, and engaging in light exercise. If the pain is severe, consult with a 
+						healthcare professional."
+						 data-no-answer="true">
+					</div>
+					<div data-conv-case="hygieneProducts">
+						<input type="text" data-conv-question="It is recommended to change your pad, tampon, or menstrual cup every 4 to 6 hours, or 
+						more frequently if needed. This helps maintain good hygiene and prevent leakage or odor."
+						 data-no-answer="true">
+					</div>
+					<div data-conv-case="swim">
+						<input type="text" data-conv-question="Yes, you can swim and exercise during your period. Many menstrual products are designed to 
+						be worn during physical activities. You can also consider using a waterproof pad or tampon specifically for swimming."
+						 data-no-answer="true">
+					</div>
+					<div data-conv-case="irregularNormal">
+						<input type="text" data-conv-question="It is common for young people to have irregular periods in the first few years after starting menstruation. 
+						However, if you experience persistent irregularities, it's advisable to consult with a healthcare professional to rule out any underlying issues."
+						 data-no-answer="true">
+					</div>
+					<div data-conv-case="sex">
+						<input type="text" data-conv-question="Yes, you can have sex during your period if you and your partner are comfortable with it. However, it's important 
+						to practice safe sex and use protection to prevent the transmission of sexually transmitted infections (STIs)."
+						 data-no-answer="true">
+					</div>
+				</div>
+			</div>
+		</div>
+  
+        <!--CLOSE CONVERSATION-->
+		<div data-conv-fork="category">
+			<div data-conv-case="closeConvo">
+				<input type="text" data-conv-question="<b><u>Gentle Reminders:</u></b><br>
+				1.)Do not forget to carry necessary items like sanitary pads, menstrual cups or tampons if your periods are near.<br>
+				2.)Do maintain personal hygiene.<br>
+				3.)Do not forget to get regular check ups from the gynae!!<br>"data-no-answer="true">
+  
+				<input type="text" data-conv-question="ThankYou for visiting us:)"data-no-answer="true">
+			</div>
+		</div>
+			
+
+		</div>
+      </div>
+
+      
+      
+	  
+			  <select data-conv-question="Go back to the main menu!" name="exp">
+				<option value="experience">Main menu</option>
+			 </select>
+			  
+			  
+
+			
+
+  	</form>
+	</div>
+</div>
+<!-- ChatBot end -->
+
+<header class="header">
+	<div class="container-fluid">
+		<div class="row d-flex justify-content-between">
+			<div class="col-md-auto">
+				<a href="#!" class="logo"><img src="pics/logo-no-background.png" alt="logo"></a>
+			</div>
+			<div class="col-md-auto">
+				<nav class="main_nav">
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#portfolio">Necessary Items</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>		
+	</div>
+</header>	
+
+<div class="banner d-flex align-items-center" style="background-image: url('pics/pexels-sora-shimazaki-5938447.jpg');" id="home">
+	<ul class="socila_links">
+		<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+	</ul>	
+	<!-- HOME SECTION -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="banner_cont">
+					<h1>Bleed Well</h1>
+					<p>Want to know about periods? Checkout this comprehensive resource dedicated to providing information and support about periods and menstruation. Start exploring and let's navigate the world of periods together!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>			
+<!-- ABOUT SECTION -->
+<div class="about-section" id="about">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-5 text-justify">
+				<h2 class="bdr-btm">More About Bleed Well</h2>
+				<p>Welcome to <b><u>Bleed Well</u></b>. 
+					We understand that periods are a natural and essential part of life for individuals with a uterus. Our mission is to empower and educate, 
+					breaking down the stigma and fostering open conversations around menstrual health.<br><br>
+
+					Whether you're experiencing your first period or 
+					have been menstruating for years, our goal is to provide you with accurate and up-to-date information to help you better 
+					understand your body and menstrual cycle.<br>
+					
+					Explore our website, and resources covering various aspects of menstruation. From demystifying the menstrual cycle and its phases to addressing 
+					common concerns like menstrual pain, PMS, and menstrual hygiene, we've got you covered. You can get answers to the some of the basic questions 
+					using the chatbot at the right side.<br><br>
+		
+					
+					
+					Embrace your menstrual journey with confidence and embrace the power of your body.
+				</p>
+				<a href="#contact" class="btn1">Contact Us</a>	
+			</div>
+			<div class="col-md">
+				<div class="about-box">
+					<h3 class="bdr-btm">Salient Features</h3>
+					<ul>
+						<li><strong>Know About Periods</strong> <br>Get some necessary information related to periods</li>
+						<li><strong>Awareness</strong> <br>Ones get awared about the menstrual cycle and some of the ways to deal with it</li>
+						<li><strong>FAQs</strong> <br>Some of the frequently asked questions are answered</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md">
+				<div class="about-box">
+					<h3 class="bdr-btm">Tips for Healthy Menstrual cycle</h3>
+					<ul>
+						<li> Drink plenty of water</li>
+						<li>  Excercise Regularly</li>
+						<li> Eat more iron rich food</li>
+						<li>Stay happy</li>
+						<li>Reduce Caffiene intake</li>
+						<li>Have proper sleep</li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+<!--ALL YOU NEED IS-->
+<div class="portfolio-section" id="portfolio">
+	<div id="port_pop_pic_bg"></div>
+	<div id="port_pop_pic"></div>
+	<div class="container-fluid">
+		<h2 class="text-center bdr-btm bdr-btm-center">All You Need Is</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="portfolio-box" style="background-image: url('pics/pexels-karolina-grabowska-4239016.jpg');">
+					<h3>TAMPONS</h3>
+				</div>		
+			</div>
+			<div class="col-md-4">
+				<div class="portfolio-box" style="background-image: url('pics/pexels-karolina-grabowska-7282113.jpg');">
+					<h3>SANITARY PADS</h3>
+				</div>		
+			</div>
+			<div class="col-md-4">
+				<div class="portfolio-box" style="background-image: url('pics/pexels-sora-shimazaki-5938410.jpg');">
+					<h3>MENSTRUAL CUPS</h3>
+				</div>		
+			</div>
+			<div class="col-md-4">
+				<div class="portfolio-box" style="background-image: url('pics/heatingpads.jpg');">
+					<h3>HEATING PAD</h3>
+				</div>		
+			</div>
+			<div class="col-md-4">
+				<div class="portfolio-box" style="background-image: url('pics/pexels-nataliya-vaitkevich-7615460.jpg');">
+					<h3>MEDICINES</h3>
+				</div>		
+			</div>
+			<div class="col-md-4">
+				<div class="portfolio-box" style="background-image: url('pics/pexels-ena-marinkovic-3793450.jpg');">
+					<h3>COFFEE, CHOCOLATES, FLOWERS</h3>
+				</div>		
+			</div>
+		</div>
+	</div>
+</div>
+<!--CONTACT US-->
+<div class="contact-section d-md-flex" id="contact">
+  <div class="col-md-6 col-12 contact_section_left">
+    <div class="contact_box">
+      <i class="fa fa-phone"></i>
+      <h3>Phone</h3>
+      <p>+91(6280015313)</p>
+    </div>
+    <div class="contact_box">
+      <i class="fa fa-envelope"></i>
+      <h3>Email</h3>
+      <p>arorapriyanka1801@gmail.com</p>
+    </div>
+    <div class="contact_box">
+      <i class="fa fa-map-marker"></i>
+      <h3>Address</h3>
+      <p>Patiala, Punjab, India</p>
+    </div>
+  </div>
+  <div class="col-md-6 col-12 contact_section_right d-flex align-items-center">
+    <div class="contact_box">
+      <h2 class="bdr-btm">Get In Touch</h2>
+      <form>
+        <div>
+          <input type="text" name="" placeholder="Name">
+          <input type="text" name="" placeholder="Email">
+          <input type="text" name="" placeholder="Subject">
+          <textarea placeholder="Message"></textarea>
+          <input type="submit" class="inline-block" name="" value="Send Message">
+		 
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--footer-->
+<footer>
+	<div class="footer-content">
+	  <p class="copyright">
+		&copy; 2023 Bleed Well. All rights reserved.
+	  </p>
+	  <p class="owner">Priyanka Arora: Socials</p>
+	  <div class="social-links">
+		<a href="https://www.linkedin.com/in/priyanka-arora-1809pa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+		<a href="https://www.instagram.com/priyanka_arora1801/" target="_blank"><i class="fab fa-instagram"></i></a>
+	  </div>
+	</div>
+  </footer>
+  
+  
+
+<script type="text/javascript">
+	portfolioList = document.querySelectorAll('.portfolio-box');
+	portfolioList.forEach(function(portfolioPic) {
+		portfolioPic.addEventListener('click',function(){
+			bg = this.style.backgroundImage;
+			document.getElementById('port_pop_pic_bg').classList.add("active")
+			document.getElementById('port_pop_pic').style.backgroundImage = bg
+			document.getElementById('port_pop_pic').classList.add("active")
+		});	
+	})
+	document.getElementById('port_pop_pic_bg').addEventListener('click',function(){
+			document.getElementById('port_pop_pic_bg').classList.remove("active")
+			document.getElementById('port_pop_pic').classList.remove("active")
+	})
+</script>
+
+</body>
+</html>
