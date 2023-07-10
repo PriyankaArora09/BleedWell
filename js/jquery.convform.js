@@ -531,3 +531,14 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
         }
     }
 })( jQuery );
+
+// changes----------------------------------------------------------
+function handleResponse(response) {
+    // Example: Append a new message to the chatbot container
+    var message = $('<div class="message"></div>').text(response);
+    $('.chat_box').append(message);
+    
+    // Example: Scroll to the bottom of the chatbot container
+    $('.chat_box').scrollTop($('.chatbot-container')[0].scrollHeight);
+  }
+  
