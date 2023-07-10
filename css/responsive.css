@@ -44,7 +44,16 @@
 @media screen and (max-width: 480px) {
 	.chat_box {
 	  width: 80%;
+	  height: 60vh;
 	  overflow-x: auto;
+	}
+	.chat_icon{
+		font-size: 30px;
+	}
+	.my-conv-form-wrapper textarea{
+		width: 100%;
+		padding: 10px;
+		
 	}
 	/* Additional mobile-specific CSS modifications */
   }
