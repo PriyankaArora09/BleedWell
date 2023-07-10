@@ -39,6 +39,17 @@
 
 }
 
+/* changes----------------------------------------------------------------------------------------------- */
+/* CSS for mobile view */
+@media screen and (max-width: 480px) {
+	.chat_box {
+	  width: 80%;
+	  overflow-x: auto;
+	}
+	/* Additional mobile-specific CSS modifications */
+  }
+  
+
 
 
 
